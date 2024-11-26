@@ -30,6 +30,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SPITFT.h>
 #include <Adafruit_SPITFT_Macros.h>
+#include "Adafruit_TCA8418.h"
 
 #define ST7735_TFTWIDTH_128 128  // for 1.44 and mini
 #define ST7735_TFTWIDTH_80 80    // for mini
@@ -91,7 +92,7 @@ public:
   Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t _CS, int8_t _DC, int8_t _MOSI,
                   int8_t _SCLK, int8_t _RST = -1, int8_t _MISO = -1);
   Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t CS, int8_t RS,
-                  int8_t RST = -1);
+                  int8_t RST = -1, Adafruit_TCA8418* _tio = new Adafruit_TCA8418());
 #if !defined(ESP8266)
   Adafruit_ST77xx(uint16_t w, uint16_t h, SPIClass *spiClass, int8_t CS,
                   int8_t RS, int8_t RST = -1);
@@ -112,6 +113,8 @@ protected:
   void commonInit(const uint8_t *cmdList);
   void displayInit(const uint8_t *addr);
   void setColRowStart(int8_t col, int8_t row);
+private:
+  Adafruit_TCA8418* _tio;
 };
 
 #endif // _ADAFRUIT_ST77XXH_

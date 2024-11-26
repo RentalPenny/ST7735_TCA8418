@@ -2,6 +2,7 @@
 #define _ADAFRUIT_ST7735H_
 
 #include "Adafruit_ST77xx.h"
+#include "Adafruit_TCA8418.h"
 
 // some flags for initR() :(
 #define INITR_GREENTAB 0x00
@@ -52,7 +53,7 @@
 class Adafruit_ST7735 : public Adafruit_ST77xx {
 public:
   Adafruit_ST7735(int8_t cs, int8_t dc, int8_t mosi, int8_t sclk, int8_t rst);
-  Adafruit_ST7735(int8_t cs, int8_t dc, int8_t rst);
+  Adafruit_ST7735(int8_t cs, int8_t dc, int8_t rst, Adafruit_TCA8418 *_tio = new Adafruit_TCA8418());
 #if !defined(ESP8266)
   Adafruit_ST7735(SPIClass *spiClass, int8_t cs, int8_t dc, int8_t rst);
 #endif // end !ESP8266
@@ -66,6 +67,7 @@ public:
 
 private:
   uint8_t tabcolor;
+  Adafruit_TCA8418* _tio;
 };
 
 #endif // _ADAFRUIT_ST7735H_

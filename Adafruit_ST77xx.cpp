@@ -22,6 +22,7 @@
   MIT license, all text above must be included in any redistribution
  **************************************************************************/
 
+#include "Adafruit_TCA8418.h"
 #include "Adafruit_ST77xx.h"
 #include <limits.h>
 #if !defined(ARDUINO_STM32_FEATHER) && !defined(ARDUINO_UNOR4_WIFI)
@@ -63,8 +64,8 @@ Adafruit_ST77xx::Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t cs, int8_t dc,
 */
 /**************************************************************************/
 Adafruit_ST77xx::Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t cs, int8_t dc,
-                                 int8_t rst)
-    : Adafruit_SPITFT(w, h, cs, dc, rst) {}
+                                 int8_t rst, Adafruit_TCA8418 *tio)
+    : Adafruit_SPITFT(w, h, cs, dc, rst, tio) {}
 
 #if !defined(ESP8266)
 /**************************************************************************/
