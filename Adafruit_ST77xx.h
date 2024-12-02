@@ -28,8 +28,8 @@
 #include "Arduino.h"
 #include "Print.h"
 #include <Adafruit_GFX.h>
-#include <Adafruit_SPITFT.h>
-#include <Adafruit_SPITFT_Macros.h>
+#include "../GFX_TCA8418/Adafruit_SPITFT.h"
+#include "../GFX_TCA8418/Adafruit_SPITFT_Macros.h"
 #include "Adafruit_TCA8418.h"
 
 #define ST7735_TFTWIDTH_128 128  // for 1.44 and mini

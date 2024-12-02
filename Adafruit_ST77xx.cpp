@@ -24,6 +24,7 @@
 
 #include "Adafruit_TCA8418.h"
 #include "Adafruit_ST77xx.h"
+#include "../GFX_TCA8418/Adafruit_SPITFT.h"
 #include <limits.h>
 #if !defined(ARDUINO_STM32_FEATHER) && !defined(ARDUINO_UNOR4_WIFI)
 #if !defined(ARDUINO_UNOR4_MINIMA)
