@@ -27,7 +27,7 @@
 
 #include "Arduino.h"
 #include "Print.h"
-#include <Adafruit_GFX.h>
+#include "../GFX_TCA8418/Adafruit_GFX.h"
 #include "../GFX_TCA8418/Adafruit_SPITFT.h"
 #include "../GFX_TCA8418/Adafruit_SPITFT_Macros.h"
 #include "Adafruit_TCA8418.h"
