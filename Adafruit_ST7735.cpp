@@ -1,5 +1,6 @@
 #include "Adafruit_ST7735.h"
 #include "Adafruit_ST77xx.h"
+#include <Adafruit_TCA8148.h>
 
 // CONSTRUCTORS ************************************************************
 
@@ -12,9 +13,9 @@
     @param  rst   Reset pin # (optional, pass -1 if unused)
 */
 Adafruit_ST7735::Adafruit_ST7735(int8_t cs, int8_t dc, int8_t mosi, int8_t sclk,
-                                 int8_t rst)
+                                 int8_t rst, Adafruit_TCA8418 *tio)
     : Adafruit_ST77xx(ST7735_TFTWIDTH_128, ST7735_TFTHEIGHT_160, cs, dc, mosi,
-                      sclk, rst) {}
+                      sclk, rst, tio) {}
 
 /*!
     @brief  Instantiate Adafruit ST7735 driver with default hardware SPI

@@ -52,7 +52,7 @@
 /// Subclass of ST77XX for ST7735B and ST7735R TFT Drivers:
 class Adafruit_ST7735 : public Adafruit_ST77xx {
 public:
-  Adafruit_ST7735(int8_t cs, int8_t dc, int8_t mosi, int8_t sclk, int8_t rst);
+  Adafruit_ST7735(int8_t cs, int8_t dc, int8_t mosi, int8_t sclk, int8_t rst, Adafruit_TCA8418 *_tio = new Adafruit_TCA8418());
   Adafruit_ST7735(int8_t cs, int8_t dc, int8_t rst, Adafruit_TCA8418 *_tio = new Adafruit_TCA8418());
 #if !defined(ESP8266)
   Adafruit_ST7735(SPIClass *spiClass, int8_t cs, int8_t dc, int8_t rst);
