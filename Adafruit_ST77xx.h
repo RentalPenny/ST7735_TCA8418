@@ -90,7 +90,7 @@
 class Adafruit_ST77xx : public Adafruit_SPITFT {
 public:
   Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t _CS, int8_t _DC, int8_t _MOSI,
-                  int8_t _SCLK, int8_t _RST = -1, int8_t _MISO = -1, Adafruit_TCA8418* _tio = new Adafruit_TCA8418());
+                  int8_t _SCLK, int8_t _RST = -1, Adafruit_TCA8418* _tio = new Adafruit_TCA8418());
   Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t CS, int8_t RS,
                   int8_t RST = -1, Adafruit_TCA8418* _tio = new Adafruit_TCA8418());
 #if !defined(ESP8266)

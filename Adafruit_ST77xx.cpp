@@ -49,9 +49,8 @@
 */
 /**************************************************************************/
 Adafruit_ST77xx::Adafruit_ST77xx(uint16_t w, uint16_t h, int8_t cs, int8_t dc,
-                                 int8_t mosi, int8_t sclk, int8_t rst,
-                                 int8_t miso, Adafruit_TCA8418 *tio)
-    : Adafruit_SPITFT(w, h, cs, dc, mosi, sclk, rst, miso, tio) {}
+                                 int8_t mosi, int8_t sclk, int8_t rst, Adafruit_TCA8418 *tio)
+    : Adafruit_SPITFT(w, h, cs, dc, mosi, sclk, rst, -1, tio) {}
 
 /**************************************************************************/
 /*!
